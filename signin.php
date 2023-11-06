@@ -1,7 +1,7 @@
 <?php
 include('database.php');
 
-if (empty($_POST["sign_name"]))  {
+if (empty($_POST["sign_email"]))  {
     die("Name is required");
 }
 
@@ -27,9 +27,9 @@ $password_hash = password_hash($_POST["sign_password"], PASSWORD_DEFAULT);
 //update
 //delete
 
-$name = $_POST["sign_name"];
+$email = $_POST["sign_email"];
 $password = $_POST["sign_password"];
-$query = "select * from user where name='$name'";
+$query = "select * from user where name='$email'";
 if($mysqli->query($query)){
     $result = $mysqli->query($query);
     $length = mysqli_num_rows($result);
@@ -51,19 +51,6 @@ if($mysqli->query($query)){
     }
 
 
-    // exit();
-
 }else{
     echo "Error";
 }
-
-// $mysqli = require __DIR__ . "/database.php";
-// $query = "select * from user";
-// $result = $mysqli->query($query);
-// var_dump($result);
-// foreach($result as $item){
-//     var_dump($item);
-// }
-
-// print_r($_POST);
-// var_dump($password_hash);
