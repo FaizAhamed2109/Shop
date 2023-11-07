@@ -103,6 +103,7 @@ if(isset($_GET['dele'])){
     }
     header("location:http://localhost/shop/shop.php?dele=deleted");
  }
+ 
 foreach($result as $clothes){
     // echo $user['name'].$user['email'];
 
@@ -127,7 +128,7 @@ foreach($result as $clothes){
             </div>   
             <div class="options">
             <div>
-            <a href="#">
+            <a href="">
                 <i class="fal fa-shopping-cart cart"></i>
             </a>
             </div>

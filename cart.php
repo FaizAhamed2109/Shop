@@ -49,48 +49,30 @@
              <td>Subtotal</td>
             </tr>
         </thead>
+ 
+                 <tbody>
+        
+                 <?php  $mysqli = require __DIR__ . "/database.php";
+                $query = "select * from clothes";
+                $result = $mysqli->query($query);
 
 
-            <tbody>
-
-            <?php
- require('database.php');
-   session_start();
- $mysqli = require __DIR__ . "/database.php";
- $query = "select * from clothes";
- $result = $mysqli->query($query);
-
- if(isset($_GET['id'])){
-    $id = $_GET['id'];
-    echo "Id for the product is ".$id;
-    // $query = "delete from clothes where id='$id'";
-    // if($mysqli->query($query)){
-    //     //echo Product has been deleted
-    // }
-    unset($_SESSION['cart'][$id]);
- }
-$cart_list = $_SESSION['cart'];
-$index =0;
-foreach($cart_list as $clothes){
-    // echo $user['name'].$user['email'];
-    
-    ?>
+                // foreach($result as $clothes){
+                ?>
 
                 <tr>
-                 <td><a href="<?php echo "cart.php?id=$index"?>"><i class="far fa-times-circle"></i></a></td>
-                 <td><img src="<?php echo "";?>" alt=""></td>
-                 <td><?php echo $clothes['product_name']?></td>
-                 <td><?php echo $clothes['product_price']?></td>
-                 <td><input type="number" value="1"></td>
-                 <td><?php echo $clothes['product_price']?></td>
+                 <td><a href="<?php echo"cart.php?delete=".$clothes['cloth_id']?>"><i class="far fa-times-circle"></i></a></td>
+                 <td>1</td>
+                 <td>2</td>
+                 <td>3</td>
+                 <td>4</td>
                 </tr>
-              
-                <?php
-                $index++;
-             }
-                ?>
+                
+                    <!-- <?php  ?> -->
+
             </tbody>
-    
+
+
     </table>
 
 </section>
