@@ -10,7 +10,6 @@
 }
 
 body {
-    /* background-color: #c9d6ff; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,6 +28,7 @@ body {
     width: 768px;
     max-width: 100%;
     min-height: 480px;
+
 }
 
 .container p{
@@ -93,7 +93,24 @@ body {
 .form-container{
     position: absolute;
     top: 0;
-    left: 135px;
+    left: 73px;
     height: 100%;
     transition: all 0.6s ease-in-out;
+}
+
+.form-container h1{
+    color: black;
+    font-weight: 900;
+}
+
+.form-container input{
+    color: black;
+    font-weight: 700;
+}
+
+.form-container .submit{
+    background:#512da8;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
 }

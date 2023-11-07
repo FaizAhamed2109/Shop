@@ -23,6 +23,7 @@
                 <input type="text" placeholder="Name" name="name" id="name" >
                 <input type="email" placeholder="Email" name="email" id="email">
                 <input type="password" placeholder="Password" name="password" id="password">
+                <input type="password" placeholder="Re-enter Your Password"  id="password_confirmation" name="password_confirmation">
                 <button>Sign Up</button>
             </form>
         </div>
@@ -37,8 +38,8 @@
                     <a href="#" class="icons"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email password</span>
-                <input type="email" placeholder="Email" name="sign_email" id="name">
-                <input type="password" placeholder="Password"  id="password" name="sign_password">
+                <input type="email" placeholder="Email" name="sign_email" id="sign_email">
+                <input type="password" placeholder="Password"  id="sign_password" name="sign_password">
                 <a href="">For Your Password ?</a>
                 <button>Sign In</button>
             </form>

@@ -1,48 +1,35 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="Add_Product.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-        <title>Document</title>
-    </head>
-    <body>
-    
-    <form action="Add_Success.php" method="post" novalidate enctype="multipart/form-data">
-             <h1>Add New Products</h1>
-            <div>
-            <label>Cloth Name</label>
-            <input type="text" name="cloth_name" id="name">
-            </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="Add_Product.css">
+    <title>Login Page</title>
+</head>
+<body>
 
-            <div>
-            <label>Cloth Description</label>
-            <input type="text" name="cloth_desc" id="email">
-            </div>
-            
-            <div>
-                <label>Price</label>
-                <input type="text" id="price" name="price">
-            </div>
-
-            <div>
-            <label>Cloth Image</label>
-            <input type="file" name="uploadfile" value="" />
-            </div>
-            
-            <div>
-                <label>Rating</label>
-                <input type="text" id="rating" name="rating">
-            </div>
-
-            <button>Add Product</button>
-
-        </form>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form action="Add_Success.php" method="post" novalidate enctype="multipart/form-data">
+                <h1>Add You Product Here !</h1>
+                <input type="text" placeholder="Enter the product name" name="cloth_name" id="name">            
+                <input type="text" placeholder="Enter the product description" name="cloth_desc" id="email">
+                <input type="text"  placeholder="Enter the product price" id="price" name="price">
+                <input type="file"  name="uploadfile" value="" />
+                <input type="text"  placeholder="Enter the product rating" id="rating" name="rating">
+                <button>Add Your Product !</button>
+            </form>
+        </div>
+       
 
 
-    
-    
-    
-    </body>
-    </html>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>

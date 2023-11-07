@@ -29,7 +29,7 @@ $password_hash = password_hash($_POST["sign_password"], PASSWORD_DEFAULT);
 
 $email = $_POST["sign_email"];
 $password = $_POST["sign_password"];
-$query = "select * from user where name='$email'";
+$query = "select * from user where email='$email'";
 if($mysqli->query($query)){
     $result = $mysqli->query($query);
     $length = mysqli_num_rows($result);

@@ -1,10 +1,9 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="Add_Product.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+        <link rel="stylesheet" href="edit.css">
         <title>Document</title>
     </head>
     <body>
@@ -51,45 +50,27 @@
 
     foreach($result as $product){
         ?>
-    <form action="edit_product.php" method="post" novalidate enctype="multipart/form-data">
-             <h1>Add New Products</h1>
-            <div>
-            <input type="hidden" name="cloth_id" id="name" value="<?php echo $product['cloth_id']; ?>">
-            <label>Cloth Name</label>
-            <input type="text" name="cloth_name" id="name" value="<?php echo $product['cloth_name']; ?>">
-            </div>
-
-            <div>
-            <label>Cloth Description</label>
-            <input type="text" name="cloth_desc" id="email" value="<?php echo $product['cloth_desc']; ?>">
-            </div>
-            
-            <div>
-                <label>Price</label>
+        
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form action="edit_product.php" method="post" novalidate enctype="multipart/form-data">
+                <h1>Edit your product !</h1>
+                <input type="hidden" name="cloth_id" id="name" value="<?php echo $product['cloth_id']; ?>">
+                <input type="text" name="cloth_name" id="name" value="<?php echo $product['cloth_name']; ?>">            
+                <input  type="text" name="cloth_desc" id="email" value="<?php echo $product['cloth_desc']; ?>">
                 <input type="text" id="price" name="price" value="<?php echo $product['price']; ?>">
-            </div>
-
-            <div>
-            <label>Cloth Image</label>
-            <div style="display:flex;">>
-            <input type="file" name="uploadfile"/>
-            <input name="old_uploadfile" value="<?php echo $product['cloth_image']; ?>"/>
-            </div>
-
-            </div>
-            
-            <div>
-                <label>Rating</label>
+                <div style="display:flex;">
+                    <input type="file" name="uploadfile"/>
+                    <input name="old_uploadfile" value="<?php echo $product['cloth_image']; ?>"/>
+                </div>
+               
                 <input type="text" id="rating" name="rating" value="<?php echo $product['rating']; ?>">
-            </div>
+                <input class= "submit" name="submit" type="submit" placeholder="Modify changes to the Product !"></input>
 
-            <input name="submit" type="submit"></input>
+            </form>
+        </div>
 
-        </form>
-
-
-    
-    
+    </div>
 
         <?php
     }

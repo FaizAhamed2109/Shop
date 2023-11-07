@@ -22,16 +22,16 @@ if (! preg_match("/[0-9]/", $_POST["password"])) {
     die("Password must contain at least one number");
 }
 
-// if ($_POST["password"] !== $_POST["password_confirmation"]) {
-//     die("Password doesn't match");
-// }
+if ($_POST["password"] !== $_POST["password_confirmation"]) {
+    die("Password doesn't match");
+}
 
-// $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
+$password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-//select -> display information
-//insert -> add
-//update
-//delete
+// select -> display information
+// insert -> add
+// update
+// delete
 
 $name = $_POST["name"];
 $email = $_POST["email"];
